@@ -1,5 +1,6 @@
-/README
-/.sass-cache
+.sass-cache
+build
+css
 
 # Global/Adobe Design Files
 *.psd

@@ -4,7 +4,7 @@ task :generate do
   system "rm -rf build"
   system "mkdir build"
   system "./bin/compass compile"
-  system "cp -r stylesheets/ js/ index.html build/"
+  system "cp -r css/ js/ index.html favicon.ico build/"
   cd "build" do
     system "git init"
     system "git remote add origin git@github.com:Fraina/Material-Design-ColorPicker.git"
@@ -18,7 +18,7 @@ task :push do
     system "git add ."
     system "git add -u"
     system "git commit -m \"Site updated at #{Time.now.utc}\""
-    system "git push origin gh-pages --force"
+    system "git push origin master:gh-pages --force"
   end
 end
 
