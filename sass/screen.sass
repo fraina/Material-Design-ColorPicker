@@ -105,12 +105,10 @@ html , body
 	background-color: #222
 
 .container
-	//+container
 	display: table
 	width: 100%
 	height: 100%
 	overflow: hidden
-	padding-bottom: 40px
 
 	%color
 		display: table-row
@@ -123,7 +121,7 @@ html , body
 	.colors
 		height: 100%
 
-	> div,
+	div[data-type=color],
 	.colors
 		@extend %color
 
@@ -185,21 +183,26 @@ html , body
 	+box-shadow(0px 3px 8px rgba(0,0,0,0.42) inset)
 	position: fixed
 	bottom: 0
-	width: 100%
-	display: table-row
+	width: columns(14)
+	overflow: hidden
 	background-color: #222
-	padding: 7px
-	min-height: 26px
 
-	.title
-		width: 100%
-		display: block
-		font-size: .8em
-		height: 20px
-		line-height: 1.9
-		padding-left: 7px
-		color: #555
-		+text-shadow(0 -1px 1px rgba(black ,0.42))
+	.heading
+		overflow: hidden
+		margin-top: 3px
+		.title
+			width: 100%
+			font-size: .8em
+			padding-left: 7px
+			line-height: 2
+			color: #555
+			+text-shadow(0 -1px 1px rgba(black ,0.42))
+		.ghbtns
+			float: right
+			margin: 0
+			padding-top: 3px
+			li
+				display: inline-block
 
 	i
 		+border-radius(5px)
@@ -216,7 +219,7 @@ html , body
 		background-color: red
 		border: 4px #fff solid
 		float: left
-		margin: 11px 7px
+		margin: 9px 6px
 		&.exist
 			animation: shadow 0.5s infinite
 			-webkit-animation: shadow 0.5s infinite
@@ -247,17 +250,10 @@ html , body
 			background-color: red
 			border: 2px white solid
 			cursor: pointer
-	.ghbtns
-		position: absolute
-		display: block
-		right: 0
-		margin-top: -20px
-		li
-			display: inline-block
 
 	&.hide
 		i
-			margin: 2px 3px
+			margin: 3px 2px
 			width: 20px
 			height: 20px
 			min-width: 10px
@@ -269,7 +265,5 @@ html , body
 			.code,
 			.delete
 				display: none
-		.title
-			display: none
-		.ghbtns
+		.heading
 			display: none
