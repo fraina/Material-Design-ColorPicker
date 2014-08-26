@@ -40,6 +40,7 @@ $(document).ready(function(){
 	// $picker.addClass('hide')
 	$(document).on('click', '.picker', function(event){
 		$picker.toggleClass('hide');
+		getLayout();
 	})
 
 	$(document).on('click', '.code', function(event){
