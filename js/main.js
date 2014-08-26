@@ -1,14 +1,19 @@
 $(function(){
-	var $picker = $('.picker'),
-			$color = $picker.find('i'),
+	var $colors = $('.container div[data-type="color"]'),
+			$picker = $('.picker'),
 			$delete_color = $picker.find('.delete');
 
-	$('.container div[data-type="color"]').each(function(){
+	$colors.each(function(){
 		$(this).html('<div class="flipper"><div class="origin"></div><div class="colors"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>')
 		.addClass('turn180')
 		.find('i').click(function(){
 			var selectColor = $(this).css('backgroundColor');
-			$picker.append('<i style="background-color: ' + rgb2hex(selectColor) + ';"><span class="delete">-</span><input class="code" value="'+ rgb2hex(selectColor) +'"></i>');
+			var colorHex = rgb2hex(selectColor);
+			$picker.append('<i style="background-color: ' + colorHex + ';"><span class="delete">-</span><input class="code" value="'+ colorHex +'"></i>');
+			$picker.find('input[value='+ colorHex +']').parent().addClass('exist').delay(500).queue(function(){
+				$(this).removeAttr('class');
+				$(this).dequeue();
+			})
 		})
 	})
 

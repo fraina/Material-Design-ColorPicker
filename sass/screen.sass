@@ -48,37 +48,55 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 			background: nth($base, 6)
 
 =turn180($zIndex: 10)
-	position: relative //因為要用 absolute定位，所以外圍當然要用relative囉~
-	+perspective(1000)  //透視
+	position: relative
+	+perspective(1000)
 
 	.flipper
-		+transform-style(preserve-3d) //transform3D必要
-		+transition(all 0.8s) //動畫轉換效果
+		+transform-style(preserve-3d)
+		+transition(all 0.8s)
 		height: 100%
 		&:hover
-			+transform(rotateY(180deg))  //滑入之後，整體旋轉180度
-			&:first-child  //這邊是要將兩張圖的前後位置對調
+			+transform(rotateY(180deg))
+			&:first-child
 				z-index: $zIndex + 1
-				& + * //相鄰的第二張圖要放在前方
+				& + *
 					z-index: $zIndex + 2
 
-		& > * //這邊用全域選取器，也可以換成其他的~
+		& > *
 			position: absolute
 			top: 0
 			+transform-style(preserve-3d)
-			&:first-child //這邊就是先將第一張圖放在前方
+			&:first-child
 				z-index: $zIndex + 2
 				left: 0
-				+backface-visibility(hidden) //CSS3D 不顯示背面的圖
-				& + * //相鄰的第二個元素
+				+backface-visibility(hidden)
+				& + *
 					z-index: $zIndex + 1
 					right: 0
-					+transform(rotateY(180deg)) //第二張圖先反轉到背面
+					+transform(rotateY(180deg))
 					+backface-visibility(hidden)
 
 .turn180
 	+turn180
 	z-index: 9999
+
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
++keyframes(shadow)
+	0%, 100%
+		+box-shadow(none)
+	35%
+		+box-shadow(0 0 6px rgba(white, .7))
+	70%
+		+box-shadow(0 0 6px rgba(white, .2))
 
 /* Layout ------------------------------------------------------------------*/
 
@@ -168,6 +186,7 @@ html , body
 	position: fixed
 	bottom: 0
 	width: 100%
+	display: table-row
 	background-color: #222
 	padding: 7px
 	min-height: 26px
@@ -176,8 +195,9 @@ html , body
 		width: 100%
 		display: block
 		font-size: .8em
-		height: 17px
-		line-height: 1
+		height: 20px
+		line-height: 1.9
+		padding-left: 7px
 		color: #555
 		+text-shadow(0 -1px 1px rgba(black ,0.42))
 
@@ -197,6 +217,9 @@ html , body
 		border: 4px #fff solid
 		float: left
 		margin: 11px 7px
+		&.exist
+			animation: shadow 0.5s infinite
+			-webkit-animation: shadow 0.5s infinite
 		.code
 			position: absolute
 			display: block
@@ -224,6 +247,13 @@ html , body
 			background-color: red
 			border: 2px white solid
 			cursor: pointer
+	.ghbtns
+		position: absolute
+		display: block
+		right: 0
+		margin-top: -20px
+		li
+			display: inline-block
 
 	&.hide
 		i
@@ -240,4 +270,6 @@ html , body
 			.delete
 				display: none
 		.title
+			display: none
+		.ghbtns
 			display: none
