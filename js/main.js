@@ -37,7 +37,6 @@ $(document).ready(function(){
 		event.stopPropagation();
 	})
 
-	// $picker.addClass('hide')
 	$(document).on('click', '.picker', function(event){
 		$picker.toggleClass('hide');
 		getLayout();
