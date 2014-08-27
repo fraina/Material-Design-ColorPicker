@@ -4,7 +4,7 @@ task :generate do
   system "rm -rf build"
   system "mkdir build"
   system "./bin/compass compile"
-  system "cp -r css/ js/ index.html favicon.ico build/"
+  system "cp -r css/ js/ index.html favicon.ico outdated-browser/ build/"
   cd "build" do
     system "git init"
     system "git remote add origin git@github.com:Fraina/Material-Design-ColorPicker.git"

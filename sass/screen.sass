@@ -5,13 +5,6 @@
 @import "compass/css3"
 
 // ---------------------------------
-// base
-// ---------------------------------
-
-html
-	background-color: #c1c1c1
-
-// ---------------------------------
 // mixin
 // ---------------------------------
 
@@ -52,7 +45,7 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 	.flipper
 		+transform-style(preserve-3d)
 		+transition(all 0.8s)
-		height: 100%
+		display: table-cell
 		&:hover
 			+transform(rotateY(180deg))
 			&:first-child
@@ -77,6 +70,7 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 .turn180
 	+turn180
 	z-index: 9999
+	background-color: #222
 
 =keyframes($name)
 	@-webkit-keyframes #{$name}

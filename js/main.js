@@ -53,4 +53,13 @@ $(document).ready(function(){
 		}
 		return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 	}
+
+	// Outdated Brower
+	outdatedBrowser({
+			bgColor: '#f25648',
+			color: '#ffffff',
+			lowerThan: 'transform',
+			languagePath: '../outdated-browser/lang/en.html'
+	})
+
 })
