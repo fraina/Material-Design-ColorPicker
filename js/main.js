@@ -34,7 +34,9 @@ $(document).ready(function(){
 	})
 
 	$(document).on('click', '.picker i', function(event){
-		event.stopPropagation();
+		if ( ! $(this).parent().hasClass('hide')) {
+			event.stopPropagation();
+		}
 	})
 
 	$(document).on('click', '.picker', function(event){
@@ -56,10 +58,10 @@ $(document).ready(function(){
 
 	// Outdated Brower
 	outdatedBrowser({
-			bgColor: '#f25648',
-			color: '#ffffff',
-			lowerThan: 'transform',
-			languagePath: '../outdated-browser/lang/en.html'
+		bgColor: '#f25648',
+		color: '#ffffff',
+		lowerThan: 'transform',
+		languagePath: '../outdated-browser/lang/en.html'
 	})
 
 })
