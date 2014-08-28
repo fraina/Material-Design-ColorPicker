@@ -1,0 +1,688 @@
+/* ========================================================================== Normalize.scss settings ========================================================================== */
+/** Includes legacy browser support IE6/7  Set to false if you want to drop support for IE6 and IE7 */
+/* Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+
+/** Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+/* Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics ========================================================================== */
+/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari and Chrome. */
+dfn { font-style: italic; }
+
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Addresses styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* Embedded content ========================================================================== */
+/** 1. Remove border when inside `a` element in IE 8/9/10. 2. Improves image quality when scaled in IE 7. */
+img { border: 0; }
+
+/** Correct overflow not hidden in IE 9/10/11. */
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari. */
+figure { margin: 1em 40px; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Contain overflow in all browsers. */
+pre { overflow: auto; }
+
+/** Address odd `em`-unit font size rendering in all browsers. Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* Forms ========================================================================== */
+/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. 4. Improves appearance and consistency in all browsers. */
+button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+button { overflow: visible; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. 4. Removes inner spacing in IE 7 without affecting normal text inputs. Known issue: inner spacing remains in IE 6. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+input { line-height: normal; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. Known issue: excess padding remains in IE 6. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. 3. Corrects text not wrapping in Firefox 3. 4. Corrects alignment displayed oddly in IE 6/7. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** Remove default vertical scrollbar in IE 8/9/10/11. */
+textarea { overflow: auto; }
+
+/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+optgroup { font-weight: bold; }
+
+/* Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+td, th { padding: 0; }
+
+.turn180 { position: relative; -webkit-perspective: 1000; -moz-perspective: 1000; -ms-perspective: 1000; -o-perspective: 1000; perspective: 1000; }
+.turn180 .flipper { -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transition: all 0.8s; -moz-transition: all 0.8s; -o-transition: all 0.8s; transition: all 0.8s; display: table-cell; }
+.turn180 .flipper:hover { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -ms-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); }
+.turn180 .flipper:hover:first-child { z-index: 11; }
+.turn180 .flipper:hover:first-child + * { z-index: 12; }
+.turn180 .flipper > * { position: absolute; top: 0; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d; }
+.turn180 .flipper > *:first-child { z-index: 12; left: 0; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
+.turn180 .flipper > *:first-child + * { z-index: 11; right: 0; -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -ms-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; }
+
+.turn180 { z-index: 9999; background-color: #222222; }
+
+@-webkit-keyframes shadow { 0%, 100% { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+  35% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); }
+  70% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); } }
+
+@-moz-keyframes shadow { 0%, 100% { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+  35% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); }
+  70% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); } }
+
+@-ms-keyframes shadow { 0%, 100% { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+  35% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); }
+  70% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); } }
+
+@keyframes shadow { 0%, 100% { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+  35% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); }
+  70% { -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); } }
+
+html, body { height: 100%; background-color: #222222; }
+
+.container { display: table; width: 100%; height: 100%; overflow: hidden; }
+.container .origin, .container div[data-type=color], .container .colors { display: table-row; width: 100%; }
+.container .origin { height: 100%; }
+.container .colors { height: 100%; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(1), .container .colors.red .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fde0dc; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(2), .container .colors.red .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #f9bdbb; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(3), .container .colors.red .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #f69988; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(4), .container .colors.red .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #f36c60; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(5), .container .colors.red .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #e84e40; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(6), .container .colors.red .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #e51c23; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(7), .container .colors.red .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #dd191d; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(8), .container .colors.red .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #d01716; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(9), .container .colors.red .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #c41411; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(10), .container .colors.red .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #b0120a; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(11), .container .colors.red .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ff7997; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(12), .container .colors.red .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #ff5177; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(13), .container .colors.red .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #ff2d6f; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].red .flipper .colors i:nth-of-type(14), .container .colors.red .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #e00032; display: block; }
+.container div[data-type=color].red .flipper .origin, .container .colors.red .flipper .origin { background: #e51c23; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(1), .container .colors.pink .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fce4ec; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(2), .container .colors.pink .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #f8bbd0; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(3), .container .colors.pink .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #f48fb1; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(4), .container .colors.pink .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #f06292; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(5), .container .colors.pink .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ec407a; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(6), .container .colors.pink .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #e91e63; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(7), .container .colors.pink .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #d81b60; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(8), .container .colors.pink .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #c2185b; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(9), .container .colors.pink .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #ad1457; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(10), .container .colors.pink .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #880e4f; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(11), .container .colors.pink .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ff80ab; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(12), .container .colors.pink .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #ff4081; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(13), .container .colors.pink .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #f50057; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].pink .flipper .colors i:nth-of-type(14), .container .colors.pink .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #c51162; display: block; }
+.container div[data-type=color].pink .flipper .origin, .container .colors.pink .flipper .origin { background: #e91e63; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(1), .container .colors.purple .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #f3e5f5; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(2), .container .colors.purple .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #e1bee7; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(3), .container .colors.purple .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #ce93d8; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(4), .container .colors.purple .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #ba68c8; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(5), .container .colors.purple .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ab47bc; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(6), .container .colors.purple .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #9c27b0; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(7), .container .colors.purple .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #8e24aa; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(8), .container .colors.purple .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #7b1fa2; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(9), .container .colors.purple .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #6a1b9a; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(10), .container .colors.purple .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #4a148c; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(11), .container .colors.purple .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ea80fc; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(12), .container .colors.purple .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #e040fb; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(13), .container .colors.purple .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #d500f9; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].purple .flipper .colors i:nth-of-type(14), .container .colors.purple .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #aa00ff; display: block; }
+.container div[data-type=color].purple .flipper .origin, .container .colors.purple .flipper .origin { background: #9c27b0; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(1), .container .colors.deep-purple .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #ede7f6; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(2), .container .colors.deep-purple .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #d1c4e9; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(3), .container .colors.deep-purple .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #b39ddb; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(4), .container .colors.deep-purple .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #9575cd; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(5), .container .colors.deep-purple .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #7e57c2; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(6), .container .colors.deep-purple .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #673ab7; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(7), .container .colors.deep-purple .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #5e35b1; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(8), .container .colors.deep-purple .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #512da8; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(9), .container .colors.deep-purple .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #4527a0; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(10), .container .colors.deep-purple .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #311b92; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(11), .container .colors.deep-purple .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #b388ff; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(12), .container .colors.deep-purple .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #7c4dff; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(13), .container .colors.deep-purple .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #651fff; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].deep-purple .flipper .colors i:nth-of-type(14), .container .colors.deep-purple .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #6200ea; display: block; }
+.container div[data-type=color].deep-purple .flipper .origin, .container .colors.deep-purple .flipper .origin { background: #673ab7; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(1), .container .colors.indigo .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #e8eaf6; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(2), .container .colors.indigo .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #c5cae9; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(3), .container .colors.indigo .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #9fa8da; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(4), .container .colors.indigo .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #7986cb; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(5), .container .colors.indigo .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #5c6bc0; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(6), .container .colors.indigo .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #3f51b5; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(7), .container .colors.indigo .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #3949ab; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(8), .container .colors.indigo .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #303f9f; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(9), .container .colors.indigo .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #283593; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(10), .container .colors.indigo .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #1a237e; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(11), .container .colors.indigo .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #8c9eff; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(12), .container .colors.indigo .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #536dfe; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(13), .container .colors.indigo .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #3d5afe; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].indigo .flipper .colors i:nth-of-type(14), .container .colors.indigo .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #304ffe; display: block; }
+.container div[data-type=color].indigo .flipper .origin, .container .colors.indigo .flipper .origin { background: #3f51b5; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(1), .container .colors.blue .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #e7e9fd; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(2), .container .colors.blue .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #d0d9ff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(3), .container .colors.blue .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #afbfff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(4), .container .colors.blue .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #91a7ff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(5), .container .colors.blue .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #738ffe; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(6), .container .colors.blue .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #5677fc; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(7), .container .colors.blue .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #4e6cef; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(8), .container .colors.blue .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #455ede; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(9), .container .colors.blue .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #3b50ce; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(10), .container .colors.blue .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #2a36b1; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(11), .container .colors.blue .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #a6baff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(12), .container .colors.blue .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #6889ff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(13), .container .colors.blue .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #4d73ff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].blue .flipper .colors i:nth-of-type(14), .container .colors.blue .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #4d69ff; display: block; }
+.container div[data-type=color].blue .flipper .origin, .container .colors.blue .flipper .origin { background: #5677fc; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(1), .container .colors.light-blue .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #e1f5fe; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(2), .container .colors.light-blue .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #b3e5fc; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(3), .container .colors.light-blue .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #81d4fa; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(4), .container .colors.light-blue .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #4fc3f7; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(5), .container .colors.light-blue .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #29b6f6; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(6), .container .colors.light-blue .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #03a9f4; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(7), .container .colors.light-blue .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #039be5; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(8), .container .colors.light-blue .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #0288d1; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(9), .container .colors.light-blue .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #0277bd; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(10), .container .colors.light-blue .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #01579b; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(11), .container .colors.light-blue .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #80d8ff; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(12), .container .colors.light-blue .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #40c4ff; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(13), .container .colors.light-blue .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #00b0ff; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].light-blue .flipper .colors i:nth-of-type(14), .container .colors.light-blue .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #0091ea; display: block; }
+.container div[data-type=color].light-blue .flipper .origin, .container .colors.light-blue .flipper .origin { background: #03a9f4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(1), .container .colors.cyan .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #e0f7fa; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(2), .container .colors.cyan .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #b2ebf2; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(3), .container .colors.cyan .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #80deea; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(4), .container .colors.cyan .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #4dd0e1; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(5), .container .colors.cyan .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #26c6da; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(6), .container .colors.cyan .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #00bcd4; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(7), .container .colors.cyan .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #00acc1; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(8), .container .colors.cyan .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #0097a7; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(9), .container .colors.cyan .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #00838f; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(10), .container .colors.cyan .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #006064; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(11), .container .colors.cyan .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #84ffff; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(12), .container .colors.cyan .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #18ffff; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(13), .container .colors.cyan .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #00e5ff; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].cyan .flipper .colors i:nth-of-type(14), .container .colors.cyan .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #00b8d4; display: block; }
+.container div[data-type=color].cyan .flipper .origin, .container .colors.cyan .flipper .origin { background: #00bcd4; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(1), .container .colors.teal .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #e0f2f1; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(2), .container .colors.teal .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #b2dfdb; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(3), .container .colors.teal .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #80cbc4; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(4), .container .colors.teal .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #4db6ac; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(5), .container .colors.teal .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #26a69a; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(6), .container .colors.teal .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #009688; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(7), .container .colors.teal .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #00897b; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(8), .container .colors.teal .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #00796b; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(9), .container .colors.teal .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #00695c; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(10), .container .colors.teal .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #004d40; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(11), .container .colors.teal .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #a7ffeb; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(12), .container .colors.teal .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #64ffda; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(13), .container .colors.teal .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #1de9b6; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].teal .flipper .colors i:nth-of-type(14), .container .colors.teal .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #00bfa5; display: block; }
+.container div[data-type=color].teal .flipper .origin, .container .colors.teal .flipper .origin { background: #009688; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(1), .container .colors.green .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #d0f8ce; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(2), .container .colors.green .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #a3e9a4; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(3), .container .colors.green .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #72d572; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(4), .container .colors.green .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #42bd41; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(5), .container .colors.green .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #2baf2b; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(6), .container .colors.green .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #259b24; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(7), .container .colors.green .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #0a8f08; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(8), .container .colors.green .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #0a7e07; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(9), .container .colors.green .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #056f00; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(10), .container .colors.green .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #0d5302; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(11), .container .colors.green .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #a2f78d; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(12), .container .colors.green .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #5af158; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(13), .container .colors.green .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #14e715; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].green .flipper .colors i:nth-of-type(14), .container .colors.green .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #12c700; display: block; }
+.container div[data-type=color].green .flipper .origin, .container .colors.green .flipper .origin { background: #259b24; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(1), .container .colors.light-green .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #f1f8e9; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(2), .container .colors.light-green .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #dcedc8; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(3), .container .colors.light-green .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #c5e1a5; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(4), .container .colors.light-green .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #aed581; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(5), .container .colors.light-green .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #9ccc65; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(6), .container .colors.light-green .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #8bc34a; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(7), .container .colors.light-green .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #7cb342; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(8), .container .colors.light-green .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #689f38; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(9), .container .colors.light-green .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #558b2f; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(10), .container .colors.light-green .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #33691e; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(11), .container .colors.light-green .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ccff90; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(12), .container .colors.light-green .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #b2ff59; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(13), .container .colors.light-green .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #76ff03; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].light-green .flipper .colors i:nth-of-type(14), .container .colors.light-green .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #64dd17; display: block; }
+.container div[data-type=color].light-green .flipper .origin, .container .colors.light-green .flipper .origin { background: #8bc34a; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(1), .container .colors.lime .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #f9fbe7; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(2), .container .colors.lime .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #f0f4c3; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(3), .container .colors.lime .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #e6ee9c; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(4), .container .colors.lime .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #dce775; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(5), .container .colors.lime .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #d4e157; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(6), .container .colors.lime .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #cddc39; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(7), .container .colors.lime .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #c0ca33; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(8), .container .colors.lime .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #afb42b; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(9), .container .colors.lime .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #9e9d24; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(10), .container .colors.lime .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #827717; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(11), .container .colors.lime .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #f4ff81; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(12), .container .colors.lime .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #eeff41; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(13), .container .colors.lime .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #c6ff00; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].lime .flipper .colors i:nth-of-type(14), .container .colors.lime .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #aeea00; display: block; }
+.container div[data-type=color].lime .flipper .origin, .container .colors.lime .flipper .origin { background: #cddc39; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(1), .container .colors.yellow .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fffde7; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(2), .container .colors.yellow .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #fff9c4; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(3), .container .colors.yellow .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #fff59d; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(4), .container .colors.yellow .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #fff176; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(5), .container .colors.yellow .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ffee58; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(6), .container .colors.yellow .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #ffeb3b; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(7), .container .colors.yellow .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #fdd835; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(8), .container .colors.yellow .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #fbc02d; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(9), .container .colors.yellow .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #f9a825; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(10), .container .colors.yellow .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #f57f17; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(11), .container .colors.yellow .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ffff8d; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(12), .container .colors.yellow .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: yellow; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(13), .container .colors.yellow .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #ffea00; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].yellow .flipper .colors i:nth-of-type(14), .container .colors.yellow .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #ffd600; display: block; }
+.container div[data-type=color].yellow .flipper .origin, .container .colors.yellow .flipper .origin { background: #ffeb3b; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(1), .container .colors.amber .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fff8e1; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(2), .container .colors.amber .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #ffecb3; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(3), .container .colors.amber .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #ffe082; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(4), .container .colors.amber .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #ffd54f; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(5), .container .colors.amber .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ffca28; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(6), .container .colors.amber .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #ffc107; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(7), .container .colors.amber .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #ffb300; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(8), .container .colors.amber .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #ffa000; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(9), .container .colors.amber .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #ff8f00; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(10), .container .colors.amber .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #ff6f00; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(11), .container .colors.amber .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ffe57f; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(12), .container .colors.amber .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #ffd740; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(13), .container .colors.amber .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #ffc400; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].amber .flipper .colors i:nth-of-type(14), .container .colors.amber .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #ffab00; display: block; }
+.container div[data-type=color].amber .flipper .origin, .container .colors.amber .flipper .origin { background: #ffc107; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(1), .container .colors.orange .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fff3e0; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(2), .container .colors.orange .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #ffe0b2; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(3), .container .colors.orange .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #ffcc80; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(4), .container .colors.orange .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #ffb74d; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(5), .container .colors.orange .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ffa726; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(6), .container .colors.orange .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #ff9800; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(7), .container .colors.orange .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #fb8c00; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(8), .container .colors.orange .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #f57c00; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(9), .container .colors.orange .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #ef6c00; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(10), .container .colors.orange .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #e65100; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(11), .container .colors.orange .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ffd180; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(12), .container .colors.orange .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #ffab40; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(13), .container .colors.orange .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #ff9100; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].orange .flipper .colors i:nth-of-type(14), .container .colors.orange .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #ff6d00; display: block; }
+.container div[data-type=color].orange .flipper .origin, .container .colors.orange .flipper .origin { background: #ff9800; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(1), .container .colors.deep-orange .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fbe9e7; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(2), .container .colors.deep-orange .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #ffccbc; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(3), .container .colors.deep-orange .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #ffab91; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(4), .container .colors.deep-orange .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #ff8a65; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(5), .container .colors.deep-orange .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #ff7043; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(6), .container .colors.deep-orange .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #ff5722; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(7), .container .colors.deep-orange .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #f4511e; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(8), .container .colors.deep-orange .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #e64a19; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(9), .container .colors.deep-orange .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #d84315; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(10), .container .colors.deep-orange .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #bf360c; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(11), .container .colors.deep-orange .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: #ff9e80; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(12), .container .colors.deep-orange .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: #ff6e40; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(13), .container .colors.deep-orange .flipper .colors i:nth-of-type(13) { z-index: 2; left: 85.71429%; background: #ff3d00; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].deep-orange .flipper .colors i:nth-of-type(14), .container .colors.deep-orange .flipper .colors i:nth-of-type(14) { z-index: 1; left: 92.85714%; background: #dd2c00; display: block; }
+.container div[data-type=color].deep-orange .flipper .origin, .container .colors.deep-orange .flipper .origin { background: #ff5722; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(1), .container .colors.brown .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #efebe9; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(2), .container .colors.brown .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #d7ccc8; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(3), .container .colors.brown .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #bcaaa4; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(4), .container .colors.brown .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #a1887f; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(5), .container .colors.brown .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #8d6e63; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(6), .container .colors.brown .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #795548; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(7), .container .colors.brown .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #6d4c41; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(8), .container .colors.brown .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #5d4037; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(9), .container .colors.brown .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #4e342e; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].brown .flipper .colors i:nth-of-type(10), .container .colors.brown .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #3e2723; display: block; }
+.container div[data-type=color].brown .flipper .origin, .container .colors.brown .flipper .origin { background: #795548; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(1), .container .colors.grey .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #fafafa; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(2), .container .colors.grey .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: whitesmoke; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(3), .container .colors.grey .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #eeeeee; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(4), .container .colors.grey .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #e0e0e0; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(5), .container .colors.grey .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #bdbdbd; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(6), .container .colors.grey .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #9e9e9e; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(7), .container .colors.grey .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #757575; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(8), .container .colors.grey .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #616161; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(9), .container .colors.grey .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #424242; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(10), .container .colors.grey .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #212121; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(11), .container .colors.grey .flipper .colors i:nth-of-type(11) { z-index: 4; left: 71.42857%; background: black; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].grey .flipper .colors i:nth-of-type(12), .container .colors.grey .flipper .colors i:nth-of-type(12) { z-index: 3; left: 78.57143%; background: white; display: block; }
+.container div[data-type=color].grey .flipper .origin, .container .colors.grey .flipper .origin { background: #9e9e9e; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(1), .container .colors.blue-grey .flipper .colors i:nth-of-type(1) { z-index: 14; left: 0%; background: #eceff1; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(2), .container .colors.blue-grey .flipper .colors i:nth-of-type(2) { z-index: 13; left: 7.14286%; background: #cfd8dc; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(3), .container .colors.blue-grey .flipper .colors i:nth-of-type(3) { z-index: 12; left: 14.28571%; background: #b0bec5; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(4), .container .colors.blue-grey .flipper .colors i:nth-of-type(4) { z-index: 11; left: 21.42857%; background: #90a4ae; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(5), .container .colors.blue-grey .flipper .colors i:nth-of-type(5) { z-index: 10; left: 28.57143%; background: #78909c; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(6), .container .colors.blue-grey .flipper .colors i:nth-of-type(6) { z-index: 9; left: 35.71429%; background: #607d8b; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(7), .container .colors.blue-grey .flipper .colors i:nth-of-type(7) { z-index: 8; left: 42.85714%; background: #546e7a; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(8), .container .colors.blue-grey .flipper .colors i:nth-of-type(8) { z-index: 7; left: 50%; background: #455a64; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(9), .container .colors.blue-grey .flipper .colors i:nth-of-type(9) { z-index: 6; left: 57.14286%; background: #37474f; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color].blue-grey .flipper .colors i:nth-of-type(10), .container .colors.blue-grey .flipper .colors i:nth-of-type(10) { z-index: 5; left: 64.28571%; background: #263238; display: block; }
+.container div[data-type=color].blue-grey .flipper .origin, .container .colors.blue-grey .flipper .origin { background: #607d8b; }
+.container div[data-type=color] i, .container .colors i { -webkit-box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2); box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2); position: absolute; width: 7.14286%; display: none; height: 100%; cursor: pointer; }
+.container div[data-type=color] i:hover, .container .colors i:hover { -webkit-transition-property: width; -moz-transition-property: width; -o-transition-property: width; transition-property: width; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; -webkit-transition-timing-function: ease-in; -moz-transition-timing-function: ease-in; -o-transition-timing-function: ease-in; transition-timing-function: ease-in; -webkit-box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35); -moz-box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35); box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35); width: 8.57143%; }
+
+.picker { -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42) inset; -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42) inset; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42) inset; position: fixed; bottom: 0; width: 100%; overflow: hidden; background-color: #222222; }
+.picker .heading { overflow: hidden; margin-top: 3px; }
+.picker .heading .title { font-size: 0.8em; padding-left: 7px; line-height: 2; color: #555555; float: left; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.42); }
+.picker .heading .ghbtns { float: right; margin: 0; padding-top: 3px; }
+.picker .heading .ghbtns li { display: inline-block; }
+.picker i { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42); -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42); box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.42); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.42); position: relative; display: block; width: 12vw; height: 12vw; min-width: 60px; min-height: 60px; max-width: 76px; max-height: 76px; background-color: red; border: 4px white solid; float: left; margin: 9px 6px; }
+.picker i.exist { animation: shadow 0.5s infinite; -webkit-animation: shadow 0.5s infinite; }
+.picker i .code { position: absolute; display: block; width: 100%; font-size: 0.8em; text-align: center; bottom: 0; background-color: rgba(255, 255, 255, 0.5); border: 0; }
+.picker i .delete { -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 30px; border-radius: 30px; -webkit-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.42); -moz-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.42); box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.42); position: absolute; right: -8px; top: -8px; color: white; font-size: 2.3em; line-height: 0.3; text-align: center; border: 1px grey dotted; width: 16px; height: 16px; display: block; overflow: hidden; background-color: red; border: 2px white solid; cursor: pointer; }
+.picker.hide i { margin: 3px 2px; width: 20px; height: 20px; min-width: 10px; min-height: 10px; max-width: 20px; max-height: 20px; display: inline; border: 1px white solid; }
+.picker.hide i .code, .picker.hide i .delete { display: none; }
+.picker.hide .heading { display: none; }
