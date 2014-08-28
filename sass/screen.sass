@@ -1,12 +1,23 @@
-// Imports -------------------------------------------------------------------
+// *************************************
+//
+//   Material Design - ColorPicker
+//   -> A simple color picker tool.
+//
+// *************************************
+
+// ---------------------------------
+// import
+// ---------------------------------
 
 @import "_base"
 @import "_normalize"
 @import "compass/css3"
 
 // ---------------------------------
-// mixin
+// helpers
 // ---------------------------------
+
+// ----- colors ----- //
 
 $red: #fde0dc, #f9bdbb, #f69988, #f36c60, #e84e40, #e51c23, #dd191d, #d01716, #c41411, #b0120a, #ff7997, #ff5177, #ff2d6f, #e00032
 $pink: #fce4ec, #f8bbd0, #f48fb1, #f06292, #ec407a, #e91e63, #d81b60, #c2185b, #ad1457, #880e4f, #ff80ab, #ff4081, #f50057, #c51162
@@ -38,7 +49,11 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 		.flipper .origin
 			background: nth($base, 6)
 
-=turn180($zIndex: 10)
+// ----- turn180 ----- //
+
+$zIndex: 10
+
+%turn180
 	position: relative
 	+perspective(1000)
 
@@ -68,9 +83,11 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 					+backface-visibility(hidden)
 
 .turn180
-	+turn180
+	@extend %turn180
 	z-index: 9999
 	background-color: #222
+
+// ----- keyframes : box-shadow ----- //
 
 =keyframes($name)
 	@-webkit-keyframes #{$name}
@@ -90,7 +107,9 @@ $blue-grey: #eceff1, #cfd8dc, #b0bec5, #90a4ae, #78909c, #607d8b, #546e7a, #455a
 	70%
 		+box-shadow(0 0 6px rgba(white, .2))
 
-/* Layout ------------------------------------------------------------------*/
+// ---------------------------------
+// Layout
+// ---------------------------------
 
 html , body
 	height: 100%
@@ -183,11 +202,11 @@ html , body
 		overflow: hidden
 		margin-top: 3px
 		.title
-			width: 100%
 			font-size: .8em
 			padding-left: 7px
 			line-height: 2
 			color: #555
+			float: left
 			+text-shadow(0 -1px 1px rgba(black ,0.42))
 		.ghbtns
 			float: right

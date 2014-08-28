@@ -4,7 +4,7 @@ Material-Design-ColorPicker
 A Material Design Color Picker
 
 ## Thanks ##
-感謝那些給予我建議的人們。
+感謝那些給予我建議與幫助的人們。
 *   [LanceHe](https://github.com/indigofeather "LanceHe")
 *   [MilesChou](https://github.com/MilesChou "MilesChou")
 
